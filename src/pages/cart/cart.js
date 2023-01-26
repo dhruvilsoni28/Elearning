@@ -7,21 +7,24 @@ const Cart = (props) => {
   return (
     <div>
       <header className="App-header">
-        <div style={{ display: "flex", flexDirection: "row", margin: "40px" }}>
-          {props.cart.map((cart, index) => {
-            return (
-              <ReviewCard
-                id={cart.id}
-                author={cart.author}
-                title={cart.title}
-                date={cart.date}
-                image={cart.image}
-                description={cart.description}
-                rating={cart.rating}
-                action="remove"
-              />
-            );
-          })}
+        <div style={{ display: "flex", flexDirection: "column", margin: "40px" }}>
+          <div>Cart</div>
+          <div>
+            {props.cart.map((cart, index) => {
+              return (
+                <ReviewCard
+                  id={cart.id}
+                  author={cart.author}
+                  title={cart.title}
+                  date={cart.date}
+                  image={cart.image}
+                  description={cart.description}
+                  rating={cart.rating}
+                  action="remove"
+                />
+              );
+            })}
+          </div>
         </div>
       </header>
     </div>
